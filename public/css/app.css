@@ -1,0 +1,482 @@
+/*
+ * @author: Dino Cajic
+ */
+/**********************************************************************************************************************/
+/* Variables                                                                                                          */
+/**********************************************************************************************************************/
+/* Pomegranate modern UI color */
+/* h1 text to appear in color "Clouds" */
+/* h2 text to appear in color "Silver" */
+/**********************************************************************************************************************/
+/* End Variables                                                                                                      */
+/**********************************************************************************************************************/
+/* Mixins                                                                                                             */
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/* End Mixins                                                                                                         */
+/**********************************************************************************************************************/
+html {
+  height: 100%;
+  /* Needed to make main background 100% height and width */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* Needed to make main background 100% height and width */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .9em;
+}
+
+/**********************************************************************************************************************/
+/* Top Navigation                                                                                                     */
+/**********************************************************************************************************************/
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  /* Fixed top navigation */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  /* Needed to keep items below top menu on scroll */
+  z-index: 99;
+  /* Looks nicer with a little bit of transparency */
+  opacity: 0.9;
+  /* Move menu items horizontally */
+}
+
+ul.nav li {
+  float: left;
+  /* Format the look of each block*/
+  /* Have blocks float to the right of the screen */
+}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  /* Change background color of each block on hover*/
+  /* Set background color on active blocks */
+}
+
+ul.nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.nav li a.active {
+  background-color: #c0392b;
+}
+
+ul.nav li.right {
+  float: right;
+}
+
+/**********************************************************************************************************************/
+/* End Top Navigation                                                                                                 */
+/**********************************************************************************************************************/
+/* Main Background                                                                                                    */
+/**********************************************************************************************************************/
+/* Sets the top banner when the visitor first comes to the website */
+#main-background {
+  background: url("../images/cover.jpg") no-repeat top center;
+  height: 100%;
+  overflow: hidden;
+  text-shadow: 0 0 5px #000000;
+}
+
+#main-background > {
+  /* Modifications to profile image in main banner */
+  /* Modifications to both h1 and h2 tag in main banner. Mainly to center the text. */
+}
+
+#main-background > img {
+  display: block;
+  margin: 5% auto 0 auto;
+  max-width: 50%;
+  -webkit-filter: drop-shadow(5px 5px 5px #111111);
+  filter: drop-shadow(5px 5px 5px #111111);
+}
+
+#main-background > h1, #main-background > h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+#main-background > h1 {
+  font-size: 300%;
+  color: #ecf0f1;
+}
+
+#main-background > h2 {
+  font-size: 200%;
+  color: #bdc3c7;
+}
+
+/**********************************************************************************************************************/
+/* End Main Background                                                                                                */
+/**********************************************************************************************************************/
+/* About Dino                                                                                                         */
+/**********************************************************************************************************************/
+/* Center the About Dino header and add additional spacing around it*/
+#about-header > h1 {
+  text-align: center;
+  margin: 3%;
+}
+
+/* Center the divs and add additional spacing to the bottom */
+#about-dino {
+  text-align: center;
+  padding-bottom: 3%;
+  /* Each figure needs to be lined up in a row. At larger screen widths, the images are 20% wide. They take up more
+   * real estate as the screen size shrinks.
+   */
+  /* Place figure in a box */
+}
+
+#about-dino > figure {
+  display: inline-block;
+  min-width: 20%;
+  max-width: 20%;
+  color: #FFFFFF;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: #4A4E4D;
+  -webkit-filter: drop-shadow(5px 5px 5px #111111);
+  filter: drop-shadow(5px 5px 5px #111111);
+  /* Modifications to each image in each about me figure */
+  /* Modify the caption */
+  /* Style the figure buttons */
+  /* Style the red buttons */
+  /* Style the h2 within figure */
+  /* Modify text in figure p tag */
+}
+
+#about-dino > figure img {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+
+#about-dino > figure > figcaption {
+  width: 100%;
+  background-color: #4A4E4D;
+  /* Dark Gray */
+  padding: 25px;
+  /* Modify the links within the caption. Make them into a button*/
+}
+
+#about-dino > figure > figcaption > a {
+  padding: 5px;
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: #4A4E4D;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.70;
+  width: 47%;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  /* Hover effect for buttons */
+}
+
+#about-dino > figure > figcaption > a:hover {
+  opacity: 1;
+}
+
+#about-dino > figure .fig-margin, #about-dino > figure .red {
+  margin-right: 6%;
+}
+
+#about-dino > figure .red {
+  border-color: #c0392b;
+  background-color: #c0392b;
+  color: #FFFFFF;
+}
+
+#about-dino > figure h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+}
+
+#about-dino > figure p {
+  margin: 0 0 10px;
+  font-size: 0.75em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+#about-dino * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#about-dino *:before, #about-dino *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**********************************************************************************************************************/
+/* End About Dino                                                                                                     */
+/**********************************************************************************************************************/
+/* Web Programming Section                                                                                            */
+/**********************************************************************************************************************/
+/* Add background image and padding to the bottom */
+#web-programming {
+  background: url("../images/web-programming-wallpaper.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 5%;
+  /* Modify links of assignments */
+}
+
+#web-programming > {
+  /* Modify h1 tag */
+  /* Modify quote under heading */
+  /* Modify div tags and add drop-shadow around table */
+}
+
+#web-programming > h1 {
+  text-align: center;
+  padding-top: 3%;
+  color: #FFFFFF;
+}
+
+#web-programming > h3 {
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+  color: #CCCCCC;
+  padding: 0 2% 1% 2%;
+}
+
+#web-programming > div {
+  background-color: #c0c0c0;
+  color: #262626;
+  width: 80%;
+  padding: 10px 10px 5px 10px;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(5px 5px 5px #111111);
+  filter: drop-shadow(5px 5px 5px #111111);
+}
+
+#web-programming a {
+  text-decoration: none;
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Modify background color creating a "zebra" pattern */
+.assignment-alt {
+  background-color: #CCCCCC !important;
+  color: #000000 !important;
+}
+
+/**********************************************************************************************************************/
+/* End Web Programming Section                                                                                        */
+/**********************************************************************************************************************/
+/* Family and Hobbies Sections                                                                                        */
+/**********************************************************************************************************************/
+/* Center the divs in family and hobbies sections */
+#family, #hobbies {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Add padding to main title */
+#family > h1,
+#hobbies > h1 {
+  padding-top: 3%;
+}
+
+/* Format quote */
+#family > h3,
+#hobbies > h3 {
+  font-weight: lighter;
+  font-style: italic;
+  padding: 0 2% 1% 2%;
+}
+
+/* Display images inline */
+.img-gallery {
+  display: inline-block;
+  width: 24.8%;
+  /* Set image width to 100% for each img-gallery container */
+}
+
+.img-gallery > img {
+  width: 100%;
+}
+
+.img-gallery > img:hover {
+  opacity: 0.9;
+}
+
+/**********************************************************************************************************************/
+/* End Family and Hobbies Sections                                                                                    */
+/**********************************************************************************************************************/
+/* Education Section                                                                                                  */
+/**********************************************************************************************************************/
+#education {
+  background: url("../images/web-programming-wallpaper.jpg") no-repeat;
+  background-size: 100% 100%;
+  margin-top: -20px;
+  text-align: center;
+  color: #f9f6f0;
+  /* Format the looks of links */
+}
+
+#education > {
+  /* Add padding to main title */
+  /* Format quote */
+  /* Format p, ol and ul tags */
+}
+
+#education > h1 {
+  padding-top: 3%;
+}
+
+#education > h3 {
+  font-weight: lighter;
+  font-style: italic;
+  padding: 0 2% 1% 2%;
+}
+
+#education > p, #education > ol, #education > ul {
+  padding-bottom: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 120%;
+}
+
+#education a {
+  text-decoration: none;
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/**********************************************************************************************************************/
+/* End Education Section                                                                                              */
+/**********************************************************************************************************************/
+/* Footer Section                                                                                                     */
+/**********************************************************************************************************************/
+/* Add padding to top and center all elements */
+#footer {
+  padding-top: 1%;
+  text-align: center;
+}
+
+#footer > {
+  /* Reduce the size of the hr tag */
+  /* Reduce the weight of the font */
+}
+
+#footer > hr {
+  width: 20%;
+}
+
+#footer > h4 {
+  font-weight: 100;
+  /* Eliminate underline next to each image */
+}
+
+#footer > h4 > a {
+  text-decoration: none;
+  /* Reduce image sizes from 50px to 30px */
+}
+
+#footer > h4 > a > img {
+  width: 30px;
+}
+
+/**********************************************************************************************************************/
+/* End Footer Section                                                                                                 */
+/**********************************************************************************************************************/
+/* Mobile and Tablet Corrections                                                                                      */
+/**********************************************************************************************************************/
+/* Correct the about me figures to move properly on mobile */
+@media screen and (max-width: 1720px) {
+  #about-dino > figure {
+    min-width: 42%;
+  }
+}
+
+/* Fill up the screen with image gallery */
+@media screen and (max-width: 1500px) {
+  .img-gallery {
+    width: 33%;
+  }
+}
+
+/* Correct the about me figures to move properly on mobile */
+@media screen and (max-width: 1045px) {
+  /* Need to push down profile image on mobile so that it doesn't go behind navigation bar */
+  #main-background > img {
+    margin: 10% auto 0 auto;
+  }
+  /* Need to readjust size of each about me figures to fit more real-estate on smaller screens */
+  #about-dino > figure {
+    min-width: 70%;
+    max-width: 78%;
+  }
+}
+
+/* Fill up the screen with image gallery */
+@media screen and (max-width: 800px) {
+  .img-gallery {
+    width: 48%;
+  }
+}
+
+/* Correct elements on screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  /* Causes the navigation to go mobile */
+  ul.nav li {
+    float: none;
+    height: 0;
+  }
+  ul.nav li.right {
+    float: none;
+    height: 0;
+    visibility: hidden;
+  }
+  /* Hide the GitHub and blog links */
+  /* Need to move profile image because of navigation bar on mobile */
+  #main-background > img {
+    margin-top: 200px;
+  }
+  #main-background > h2 {
+    font-size: 150%;
+  }
+  /* Reduce font size of h2 subheading in main banner */
+  #web-programming > h1 {
+    margin: 0 2% 0 2%;
+  }
+}
+
+/* Need to expand the background of the main banner since smaller heights cut off content */
+@media screen and (max-height: 800px) {
+  #main-background {
+    height: 800px;
+  }
+}
